@@ -1,0 +1,79 @@
+!!! 5
+
+%html{lang: 'en', class: "no-js #{data.page.slug || ''}"}
+  %head
+    %meta{charset: 'utf-8'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1'}
+
+    %title
+      - if data.page.title
+        = data.page.title
+      - else
+        ADHD: Meditatie versus medicatie
+
+    = javascript_include_tag 'modernizr'
+    = stylesheet_link_tag 'application'
+
+  %body
+    %header.mod-header
+      .layout-wrap
+        %h1= link_to 'ADHD: Meditatie versus medicatie', '/'
+
+        %ul
+          %li= link_to 'Introductie', '/'
+          %li= link_to 'Jongeren', 'jongeren.html'
+          %li= link_to 'Ouders', 'ouders.html'
+          %li= link_to 'Leerkrachten', 'leerkrachten.html'
+          %li= link_to 'Verwijzers', 'verwijzers.html'
+          %li= link_to 'Research', 'onderzoek.html'
+          %li= link_to 'Contact', 'contact.html'
+
+    = yield
+
+    .mod-footer
+      .layout-wrap
+        %ul.organizations
+          %li.uva
+            = link_to 'http://www.uva.nl' do
+              = image_tag('uva.png', alt: 'UvA')
+          %li.uva_minds
+            = link_to 'http://www.uvaminds.nl' do
+              = image_tag('uva-minds.png', alt: 'UvaMinds')
+          %li.nwo
+            = link_to 'http://www.nwo.nl/' do
+              = image_tag('nwo.png', alt: 'NWO')
+          %li.bvr
+            = link_to 'http://www.burovanroosmalen.nl' do
+              = image_tag('buro-van-roosmalen.png', alt: 'Buro van Roosmalen')
+
+        %hr
+
+        .info
+          %p
+            Renée&nbsp;Meppelink,&nbsp;MSc
+            =link_to('e-mail', 'mailto:r.meppelink@uva.nl')
+            %br
+            Tel: 020&#8209;525&nbsp;1271
+            %br
+            %br
+            Dr. Esther de Bruin
+            =link_to('e-mail', 'mailto:e.i.debruin@uva.nl')
+            %br
+            Prof. dr. Susan Bögels
+            =link_to('e-mail', 'mailto:s.m.bogels@uva.nl')
+
+          %dl
+            %dt Bezoekadres:
+            %dd
+              Nieuwe Prinsengracht 130
+              %br
+              1018 VZ Amsterdam
+            %dt Postadres:
+            %dd
+              Postbus 94209
+              %br
+              1090 GE Amsterdam
+
+          %footer
+            Universiteit van Amsterdam, Faculteit der Maatschappij en Gedragswetenschappen
+

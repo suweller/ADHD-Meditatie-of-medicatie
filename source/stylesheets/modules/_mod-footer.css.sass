@@ -1,0 +1,47 @@
+.mod-footer
+  padding-top: 5rem
+  font-size: 0.7em
+
+  .organizations
+    li
+      @extend %clearfix
+
+      margin-bottom: 3rem
+
+    img
+      display: block
+      width: 100%
+      max-width: 400px
+      margin: 0 auto
+
+  .info
+    a
+      font-size: 0.8em
+
+      &:before
+        content: '['
+        color: black
+      &:after
+        content: ']'
+        color: black
+
+  +min-width(700px)
+    font-size: 0.8em
+
+    .organizations
+      li
+        width: 50%
+        float: left
+
+    p,
+    dl
+      width: 50%
+      float: left
+
+    dl
+      text-align: right
+
+    footer
+      clear: both
+      text-align: center
+      padding: 1rem 0
