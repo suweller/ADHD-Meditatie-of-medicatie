@@ -8,26 +8,8 @@
     text-align: center
     text-shadow: 2px 2px 0 #000
 
-    &:after
-      display: block
-      position: absolute
-      background: image-url("vraagteken.png") no-repeat
-      background-size: 100% auto
-      width: 80px
-      height: 150px
-      bottom: -30px
-      right: 0
-      +transform(rotate(20deg))
-
 
   +min-width(700px)
     h1
       max-width: 500px
       font-size: 4.6em
-
-      &:after
-        content: ""
-
-    span
-      visibility: hidden
-      text-shadow: 3px 3px 0 #000
