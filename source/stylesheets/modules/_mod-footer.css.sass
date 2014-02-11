@@ -5,25 +5,24 @@
 
   .organizations
     position: relative
-    margin-bottom: 0
+    margin-bottom: 1rem
 
     li
-      @extend %clearfix
       position: relative
+      display: inline
       margin-bottom: 3rem
 
-      &.uva_minds // quick and dirty
-        left: -20px
-
     a
-      display: block
+      display: inline-block
+      padding: 0 2rem 0 0
 
     img
-      display: block
-      width: 100%
-      max-width: 540px
+      display: inline
+      max-height: 50px
+      width: auto
 
       &.jongen
+        max-height: none
         height: 300px
         width: auto
         position: absolute
@@ -52,7 +51,7 @@
           max-width: 300px
           height: auto
           right: -30px
-          bottom: 0
+          bottom: -14px
 
     .info
       padding-right: 0
