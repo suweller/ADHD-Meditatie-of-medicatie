@@ -9,24 +9,28 @@
       - if data.page.title
         = data.page.title
       - else
-        ADHD: Meditatie versus medicatie
+        ADHD: Meditatie of medicatie?
 
     = javascript_include_tag 'modernizr'
     = stylesheet_link_tag 'application'
 
-  %body
+  %body{class: page_classes}
     %header.mod-header
       .layout-wrap
-        %h1= link_to 'ADHD: Meditatie versus medicatie', '/'
+        - if page_classes.include?('index')
+          %h2= link_to 'UvA minds - ADHD Onderzoek 2014', '/'
+        - else
+          %h1= link_to 'ADHD: Meditatie of Medicatie?', '/'
 
-        %ul
-          %li= link_to 'Introductie', '/'
-          %li= link_to 'Jongeren', 'jongeren.html'
-          %li= link_to 'Ouders', 'ouders.html'
-          %li= link_to 'Leerkrachten', 'leerkrachten.html'
-          %li= link_to 'Verwijzers', 'verwijzers.html'
-          %li= link_to 'Research', 'onderzoek.html'
-          %li= link_to 'Contact', 'contact.html'
+        %nav
+          %ul
+            %li= link_to 'Introductie', '/'
+            %li= link_to 'Jongeren', 'jongeren.html'
+            %li= link_to 'Ouders', 'ouders.html'
+            %li= link_to 'Leerkrachten', 'leerkrachten.html'
+            %li= link_to 'Verwijzers', 'verwijzers.html'
+            %li= link_to 'Research', 'onderzoek.html'
+            %li= link_to 'Contact', 'contact.html'
 
     = yield
 
@@ -45,6 +49,8 @@
           %li.bvr
             = link_to 'http://www.burovanroosmalen.nl' do
               = image_tag('buro-van-roosmalen.png', alt: 'Buro van Roosmalen')
+
+          = image_tag('jongengooitpillen.png', alt: 'Jongen jongleert met pillen', class: "jongen")
 
         %hr
 

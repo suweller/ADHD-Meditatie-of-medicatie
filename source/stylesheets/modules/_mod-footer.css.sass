@@ -1,18 +1,30 @@
 .mod-footer
-  padding-top: 5rem
-  font-size: 0.7em
+  position: relative
+  padding: 5rem 0 2rem
+  font-size: 0.8em
 
   .organizations
+    position: relative
+    margin-bottom: 0
+    padding-right: 300px // for the boy
+
     li
       @extend %clearfix
-
       margin-bottom: 3rem
+
+    a
+      display: block
 
     img
       display: block
       width: 100%
-      max-width: 400px
-      margin: 0 auto
+      max-width: 540px
+
+      &.jongen
+        max-width: 300px
+        position: absolute
+        right: -87px
+        bottom: 0
 
   .info
     a
@@ -26,12 +38,10 @@
         color: black
 
   +min-width(700px)
-    font-size: 0.8em
-
-    .organizations
-      li
-        width: 50%
-        float: left
+    // .organizations
+    //   li
+    //     width: 50%
+    //     float: left
 
     p,
     dl
