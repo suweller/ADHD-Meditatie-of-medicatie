@@ -6,11 +6,14 @@
   .organizations
     position: relative
     margin-bottom: 0
-    padding-right: 300px // for the boy
 
     li
       @extend %clearfix
+      position: relative
       margin-bottom: 3rem
+
+      &.uva_minds // quick and dirty
+        left: -20px
 
     a
       display: block
@@ -21,12 +24,15 @@
       max-width: 540px
 
       &.jongen
-        max-width: 300px
+        height: 300px
+        width: auto
         position: absolute
-        right: -87px
-        bottom: 0
+        right: 0
+        bottom: -300px
 
   .info
+    padding-right: 13rem
+
     a
       font-size: 0.8em
 
@@ -38,10 +44,18 @@
         color: black
 
   +min-width(700px)
-    // .organizations
-    //   li
-    //     width: 50%
-    //     float: left
+    .organizations
+      padding-right: 300px // for the boy
+
+      img
+        &.jongen
+          max-width: 300px
+          height: auto
+          right: -30px
+          bottom: 0
+
+    .info
+      padding-right: 0
 
     p,
     dl
@@ -55,3 +69,9 @@
       clear: both
       text-align: center
       padding: 1rem 0
+
+  +min-width(1100px)
+    .organizations
+      img
+        &.jongen
+          right: -87px
