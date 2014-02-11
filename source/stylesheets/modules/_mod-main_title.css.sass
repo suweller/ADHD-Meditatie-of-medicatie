@@ -1,5 +1,6 @@
 .mod-main_title
   h1
+    position: relative
     margin: 0 auto 7rem
     color: $red
     font-size: 3.8em
@@ -7,7 +8,25 @@
     text-align: center
     text-shadow: 3px 3px 0 #000
 
+    &:after
+      display: block
+      position: absolute
+      background: image-url("vraagteken.png") no-repeat
+      background-size: 100% auto
+      width: 80px
+      height: 150px
+      bottom: -30px
+      right: 0
+      +transform(rotate(20deg))
+
+
   +min-width(700px)
     h1
       max-width: 500px
       font-size: 4.6em
+
+      &:after
+        content: ""
+
+    span
+      visibility: hidden
