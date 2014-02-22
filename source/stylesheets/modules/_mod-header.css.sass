@@ -2,7 +2,6 @@
   @extend %clearfix
   background: $red
   margin-bottom: 7rem
-  padding-bottom: 1rem
 
   h1,
   h2
@@ -18,19 +17,60 @@
     &:hover
       color: white
 
+  ul
+    padding: 0
+    margin-bottom: 0
+
   li
     display: inline
-    padding: 0 2rem 0.5rem 0
 
     a
       display: inline-block
       line-height: 1.5
+      padding: 0 0.5rem
 
       &:focus,
       &:hover
         text-decoration: underline
 
+      &.active
+        text-decoration: underline
+
+  +min-width(550px)
+    li
+      a
+        margin-left: -0.5rem
+        padding: 0.5rem
+
+        &.active
+          color: $red
+          background: white
+          text-decoration: none
+
+  +min-width(650px)
+    li
+      padding: 0 2rem 0.5rem 0
+
   +min-width(700px)
     li
       a
+        font-size: 0.8em
         line-height: 2
+        margin-left: -0.5rem
+        padding: 0.5rem
+
+  +min-width(750px)
+    li
+      a
+        margin-left: -1rem
+        padding: 0.5rem 1rem 1rem 1rem
+
+  +min-width(800px)
+    li
+      a
+        font-size: 0.95em
+
+  +min-width(850px)
+    li
+      a
+        font-size: 1em

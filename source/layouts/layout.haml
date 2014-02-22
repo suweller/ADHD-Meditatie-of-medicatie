@@ -18,19 +18,19 @@
     %header.mod-header
       .layout-wrap
         - if page_classes.include?('index')
-          %h2= link_to 'UvA minds - ADHD Onderzoek 2014', '/'
+          %h2= link_to 'ADHD Onderzoek 2014', '/'
         - else
           %h1= link_to 'ADHD: Meditatie of Medicatie?', '/'
 
         %nav
           %ul
-            %li= link_to 'Introductie', '/'
-            %li= link_to 'Jongeren', 'jongeren.html'
-            %li= link_to 'Ouders', 'ouders.html'
-            %li= link_to 'Leerkrachten', 'leerkrachten.html'
-            %li= link_to 'Verwijzers', 'verwijzers.html'
-            %li= link_to 'Research', 'onderzoek.html'
-            %li= link_to 'Contact', 'contact.html'
+            %li= nav_link 'Intro', '/'
+            %li= nav_link 'Jongeren', '/jongeren.html'
+            %li= nav_link 'Ouders', '/ouders.html'
+            %li= nav_link 'Leerkrachten', '/leerkrachten.html'
+            %li= nav_link 'Verwijzers', '/verwijzers.html'
+            %li= nav_link 'Research', '/onderzoek.html'
+            %li= nav_link 'Contact', '/contact.html'
 
     = yield
 
