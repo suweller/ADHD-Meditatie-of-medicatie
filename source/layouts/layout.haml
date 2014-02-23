@@ -4,6 +4,8 @@
   %head
     %meta{charset: 'utf-8'}
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1'}
+    %meta{name: 'keywords', content: 'onderzoek, ADHD, Ritalin, Mindfulness'}
+    %meta{name: 'author', content: 'Renée Meppelink'}
 
     %title
       - if data.page.title
@@ -55,31 +57,35 @@
         %hr
 
         .info
-          %p
-            Renée&nbsp;Meppelink,&nbsp;MSc
-            =link_to('e-mail', 'mailto:r.meppelink@uva.nl')
-            %br
-            Tel: 020&#8209;525&nbsp;1271
-            %br
-            %br
-            Dr. Esther de Bruin
-            =link_to('e-mail', 'mailto:e.i.debruin@uva.nl')
-            %br
-            Prof. dr. Susan Bögels
-            =link_to('e-mail', 'mailto:s.m.bogels@uva.nl')
+          - unless @no_contact_info_in_footer
+            %p
+              Renée&nbsp;Meppelink,&nbsp;MSc
+              =link_to('e-mail', 'mailto:r.meppelink@uva.nl')
+              %br
+              Tel: 020&#8209;525&nbsp;1271
+              %br
+              %br
+              Dr. Esther de Bruin
+              =link_to('e-mail', 'mailto:e.i.debruin@uva.nl')
+              %br
+              Prof. dr. Susan Bögels
+              =link_to('e-mail', 'mailto:s.m.bogels@uva.nl')
 
-          %dl
-            %dt Bezoekadres:
-            %dd
-              Nieuwe Prinsengracht 130
-              %br
-              1018 VZ Amsterdam
-            %dt Postadres:
-            %dd
-              Postbus 94209
-              %br
-              1090 GE Amsterdam
+            %dl
+              %dt Bezoekadres:
+              %dd
+                Nieuwe Prinsengracht 130
+                %br
+                1018 VZ Amsterdam
+              %dt Postadres:
+              %dd
+                Postbus 94209
+                %br
+                1090 GE Amsterdam
 
           %footer
             Universiteit van Amsterdam, Faculteit der Maatschappij en Gedragswetenschappen
+
+            .copyright
+              Images Copyright &copy; Corien Bögels
 

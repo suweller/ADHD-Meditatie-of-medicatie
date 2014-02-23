@@ -1,0 +1,62 @@
+- @no_contact_info_in_footer = true
+
+.layout-wrap.mod-content
+  %h2 UvA Onderzoekers
+
+  .comp-contact
+    = image_tag('renee-meppelink.jpg', alt: 'Renée Meppelink')
+    .address
+      %h1 Renée&nbsp;Meppelink,&nbsp;MSc
+      Universiteit van Amsterdam
+      %br
+      Nieuwe prinsengracht 130
+      %br
+      1018 VZ Amsterdam
+      %br
+      Kamer G1.31
+      %br
+      Email: #{link_to('r.meppelink@uva.nl', 'mailto:r.meppelink@uva.nl')}
+      %br
+      Tel: 020&#8209;525&nbsp;1271
+
+  .comp-contact
+    = image_tag('esther-de-bruin.jpg', alt: 'Esther de Bruin')
+    .address
+      %h1 Dr. Esther de Bruin
+      Email: #{link_to('e.i.debruin@uva.nl', 'mailto:e.i.debruin@uva.nl')}
+      %br
+      Tel: 020&#8209;525&nbsp;1262
+
+  .comp-contact
+    = image_tag('susan-bogels.jpg', alt: 'Susan Bögels')
+    %h1 Prof. dr. Susan Bögels
+    .address
+      Email: #{link_to('s.m.bogels@uva.nl', 'mailto:s.m.bogels@uva.nl')}
+      %br
+      Tel: 020&#8209;525&nbsp;1262
+
+
+  %h2 Deelnemende centra
+
+  %h3= link_to 'UvA minds', 'http://www.uvaminds.nl'
+  %p
+    Plantage Muidergracht 14
+    %br
+    1018 TV Amsterdam
+    %br
+    Tel: 020&#8209;525&nbsp;1441
+
+  %h3= link_to 'Buro van Roosmalen', 'http://www.burovanroosmalen.nl'
+  %p
+    Hogeweg 26
+    %br
+    5911 EB Venlo
+    %br
+    Tel: 077&#8209;320&nbsp;4300
+  %p
+    Willem II Singel 39
+    %br
+    6041 HR Roermond
+    %br
+    Tel: 047&#8209;532&nbsp;5588
+
