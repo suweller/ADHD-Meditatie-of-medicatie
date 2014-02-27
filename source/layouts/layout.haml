@@ -19,9 +19,7 @@
   %body{class: page_classes}
     %header.mod-header
       .layout-wrap
-        - if page_classes.include?('index')
-          %h2= link_to 'ADHD Onderzoek 2014', '/'
-        - else
+        - unless page_classes.include?('index')
           %h1= link_to 'ADHD: Meditatie of Medicatie?', '/'
 
         %nav
