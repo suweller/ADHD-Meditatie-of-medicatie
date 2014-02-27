@@ -52,7 +52,10 @@
             = link_to 'http://www.nwo.nl/' do
               = image_tag('nwo.png', alt: 'NWO')
 
-          = image_tag('jongengooitpillen.png', alt: 'Jongen jongleert met pillen', class: "jongen")
+          - if page_classes.include?('jongeren') || page_classes.include?('contact')
+            = image_tag('jongengooitpillen-met-tekst.png', alt: 'Jongen jongleert met pillen', class: "jongen")
+          - else
+            = image_tag('jongengooitpillen.png', alt: 'Jongen jongleert met pillen', class: "jongen")
 
         %hr
 
