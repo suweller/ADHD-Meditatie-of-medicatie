@@ -19,8 +19,11 @@
   %body{class: page_classes}
     %header.mod-header
       .layout-wrap
-        - unless page_classes.include?('index')
-          %h1= link_to 'ADHD: Meditatie of Medicatie?', '/'
+        - if data.page.title
+          %h1= link_to data.page.title, '/'
+        - else
+          - unless page_classes.include?('index')
+            %h1= link_to 'ADHD: Meditatie of Medicatie?', '/'
 
         %nav
           %ul
