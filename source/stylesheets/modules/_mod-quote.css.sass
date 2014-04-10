@@ -1,0 +1,25 @@
+.mod-quote
+  display: block
+
+  +min-width(700px)
+    width: 80%
+    margin: 0 auto
+
+  img
+    float: right
+    display: block
+    margin-top: -30px
+    margin-right: 40px
+    width: 150px
+    border-radius: 50%
+    border: 0.5rem solid #ccc
+
+  blockquote
+    display: inline
+    font-style: italic
+
+    &:before, &:after
+      display: inline
+      font-size: 2.5rem
+      line-height: 1rem
+      content: '"'
